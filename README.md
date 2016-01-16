@@ -28,20 +28,6 @@ More tissues will be added in future versions.
 
 Please refer to the example for more detailed instructions on how to initialize and use the visualisation.
 
-#### .hello(name)
-
-**Parameter**: `name`
-**Type**: `String`
-**Example**: `biojs`
-
-The 'hello' method is responsible for showing a name.
-
-How to use this method
-
-```javascript
-tissues.hello('biojs'); // "hello biojs"
-```
-
 #### .render()
 
 **Example**: `simple`
