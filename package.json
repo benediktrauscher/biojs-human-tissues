@@ -1,7 +1,7 @@
 {
   "name": "biojs-human-tissues",
   "description": "Visualisation of human tissues",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/bene200/biojs-human-tissues",
   "author": {
     "name": "Benedikt Rauscher",
@@ -22,29 +22,40 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-		"test": "echo 'Error: no test specified' && exit 1",
-		"build": "mkdirp build && browserify -r ./:biojs-human-tissues -o build/tissues.js",
-		"build-browser": "npm run build",
-		"install": "npm run build",
-		"watch": "watchify -r ./:biojs-human-tissues -v -o build/tissues.js",
-		"w": "prunner \"npm run sniper\" \"npm run watch\"",
-		"sniper": "sniper ."
+    "test": "echo 'Error: no test specified' && exit 1",
+    "build": "mkdirp build && browserify -r ./:biojs-human-tissues -o build/tissues.js",
+    "build-browser": "npm run build",
+    "install": "npm run build",
+    "watch": "watchify -r ./:biojs-human-tissues -v -o build/tissues.js",
+    "w": "prunner \"npm run sniper\" \"npm run watch\"",
+    "sniper": "sniper ."
   },
   "dependencies": {
     "underscore": "1.8.3",
     "jquery": "2.2.0"
   },
   "devDependencies": {
-		"mkdirp": "^0.5.0",
-		"browserify": "6.x",
-		"sniper": "0.x",
-		"watchify": "^1.0.6",
-		"prunner": "1.x"
+    "mkdirp": "^0.5.0",
+    "browserify": "6.x",
+    "sniper": "0.x",
+    "watchify": "^1.0.6",
+    "prunner": "1.x"
   },
   "sniper": {
-    "js": [ "/build/tissues.js"],
-    "snippets": ["examples"],
+    "js": [
+      "/build/tissues.js"
+    ],
+    "snippets": [
+      "examples"
+    ],
     "first": "simple"
-   },
-  "keywords": ["biojs","human","tissue","visualisation","visualization","biojs"]
+  },
+  "keywords": [
+    "biojs",
+    "human",
+    "tissue",
+    "visualisation",
+    "visualization",
+    "biojs"
+  ]
 }
