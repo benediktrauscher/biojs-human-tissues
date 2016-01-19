@@ -30,8 +30,6 @@ Please refer to the example for more detailed instructions on how to initialize 
 
 #### .render()
 
-**Example**: `simple`
-
 Method responsible to render the visualisation
 
 How to use this method
@@ -44,11 +42,11 @@ Tissues.render()
 
 **Parameter**: `tissue`
 **Type**: `String`
-**Example**: `simple`
+**Example**: `colon`
 
 **Parameter**: `func`
 **Type**: `Function`
-**Example**: `simple`
+**Example**: `function(evt){ console.log(evt.srcTarget.id); }`
 
 Method responsible to set mouseover events for tissues.
 
@@ -64,11 +62,11 @@ Tissues.addMouseoverEvent('pancreas', function(evt){
 
 **Parameter**: `tissue`
 **Type**: `String`
-**Example**: `simple`
+**Example**: `colon`
 
 **Parameter**: `func`
 **Type**: `Function`
-**Example**: `simple`
+**Example**: `function(evt){ console.log(evt.srcTarget.id); }`
 
 Method responsible to set click events for tissues.
 
@@ -84,11 +82,11 @@ Tissues.addClickEvent('pancreas', function(evt){
 
 **Parameter**: `tissue`
 **Type**: `String`
-**Example**: `simple`
+**Example**: `colon`
 
 **Parameter**: `color`
 **Type**: `String`
-**Example**: `simple`
+**Example**: `#444`
 
 Method responsible to say set colors for tissues.
 
@@ -96,6 +94,34 @@ How to use this method
 
 ```javascript
 Tissues.setColor('colon', '#444');
+```
+
+#### .hide(tissue)
+
+**Parameter**: `tissue`
+**Type**: `String`
+**Example**: `colon`
+
+Method responsible to hide a tissue.
+
+How to use this method
+
+```javascript
+Tissues.hide('colon');
+```
+
+#### .show(tissue)
+
+**Parameter**: `tissue`
+**Type**: `String`
+**Example**: `colon`
+
+Method responsible to show a tissue.
+
+How to use this method
+
+```javascript
+Tissues.show('colon');
 ```
 
 ## Contributing
