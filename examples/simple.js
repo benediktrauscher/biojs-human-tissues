@@ -26,12 +26,22 @@ tissues.addClickEvent('pancreas', function(evt){
 tissues.addClickEvent('skin', function(evt){
   window.open('https://en.wikipedia.org/wiki/Skin','_blank')
 });
-tissues.addClickEvent('skin', function(evt){
+tissues.addClickEvent('small_intestine', function(evt){
   window.open('https://en.wikipedia.org/wiki/Small_intestine','_blank')
 });
 
+//example mouseover events
 for(var i=0; i<tissues.tissues.length; i++){
   tissues.addMouseoverEvent(tissues.tissues[i], function(evt){
     console.log('Mousing over ' + evt.srcElement.id);
   });
 }
+
+//example tooltips
+var t;
+for(var i=0; i<tissues.tissues.length; i++){
+  t = tissues.tissues[i];
+  tissues.addTooltip(t, '<h1>Tooltip for ' + t + '!</h1>');
+}
+
+window.tissues = tissues;

@@ -124,6 +124,42 @@ How to use this method
 Tissues.show('colon');
 ```
 
+#### .addTooltip(tissue, ttcontent)
+
+**Parameter**: `tissue`
+**Type**: `String`
+**Example**: `colon`
+
+**Parameter**: `ttcontent`
+**Type**: `String`
+**Example**: `<h1>Colon tooltip!</h1>`
+
+Method responsible for adding Tooltips to tissues. The tooltip content is specified by the ttcontent parameter which can be a HTML string.
+
+How to use this method
+
+```javascript
+Tissues.addTooltip('pancreas', '<h1>Pancreas!</h1>');
+```
+
+#### .tooltipCss(key, value)
+
+**Parameter**: `key`
+**Type**: `String`
+**Example**: `backgroundColor`
+
+**Parameter**: `value`
+**Type**: `String`
+**Example**: `steelblue`
+
+Method that allows to change the CSS for tooltips.
+
+How to use this method
+
+```javascript
+Tissues.tooltipCss('backgroundColor', 'steelblue');
+```
+
 ## Contributing
 
 All contributions are welcome.
