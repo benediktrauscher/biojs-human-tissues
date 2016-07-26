@@ -1,5 +1,5 @@
 module.exports = `
-<path id="Selection #6"
+<path id="pancreas"
         fill="none" stroke="black" stroke-width="1"
         d="M 240.02,490.34
            C 241.17,492.97 243.73,494.92 243.63,498.01
