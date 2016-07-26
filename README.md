@@ -9,7 +9,7 @@ Install the module with: `npm install biojs-human-tissues`
 
 ```javascript
 var HumanTissues = require('biojs-human-tissues');
-var Tissues = new HumanTissues({el: <div>, [colors: <object>]})
+var Tissues = new HumanTissues({el: <div>, [colors: <object>], gender: string})
 ```
 
 ## Documentation
@@ -22,9 +22,19 @@ Light-weight visualisation for human tissues. Right now the list of supported ti
 * liver
 * pancreas
 * stomach
-* colon.
+* small_intestine
+* large_intestine
+* neck
+* kidney
+* prostate
+* bladder
+* breast
+* skin
+* cervix
+* ovary
+* uterus
 
-More tissues will be added in future versions.
+Please notice that it is now possible to make either a female or a male silhouette.
 
 Please refer to the example for more detailed instructions on how to initialize and use the visualisation.
 
