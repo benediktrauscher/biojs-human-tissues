@@ -1,7 +1,7 @@
 {
   "name": "biojs-human-tissues",
   "description": "Visualisation of human tissues",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/bene200/biojs-human-tissues",
   "author": {
     "name": "Benedikt Rauscher",
