@@ -18,13 +18,21 @@ const bladder = require('./bladder');
 const bone = require('./bone');
 const blood = require('./blood');
 
-module.exports = function(gender){
-  let svgpath;
+module.exports = function(gender, width){
+  let svgpath, height;
+
+  if(width == null){
+    width = '100%';
+    height ='100%';
+  }else{
+    height = calculateHeight(width);
+  }
+  console.log(`width: ${width} and height: ${height}`);
 
   if(gender === 'female'){
     svgpath = `
             <svg xmlns="http://www.w3.org/2000/svg"
-                 width="6.59722in" height="15.25in"
+                 width="${width}" height="${height}"
                  viewBox="0 0 475 1098">
                  ${skin_woman}${brain}${breast}${cervix}${ovary}${uterus}
             </svg>
@@ -32,11 +40,24 @@ module.exports = function(gender){
   } else {
     svgpath = `
             <svg xmlns="http://www.w3.org/2000/svg"
-                 width="6.59722in" height="15.25in"
+                 width="${width}" height="${height}"
                  viewBox="0 0 475 1098">
                  ${skin_man}${neck}${large_intestine}${small_intestine}${liver}${pancreas}${lungs}${stomach}${kidney}${bladder}${prostate}${bone}${blood}
             </svg>`;
   }
 
   return svgpath;
+}
+
+let calculateHeight = (width) => {
+  let height;
+  let typeofInput = width.substring(width.length-2,width.length);
+  let widthN = width.substring(0,width.length-2);
+  if(typeofInput.includes('%')){
+    widthN += typeofInput.substring(0,1);
+    height = 2.31157973 * widthN + '%';
+  }else{
+    height = 2.31157973 * widthN + typeofInput;
+  }
+  return height;
 }
