@@ -2,8 +2,8 @@
   let femalediv = document.getElementById("female");
 
   const HumanTissues = require('biojs-human-tissues');
-  let tissuesmale = new HumanTissues({el: malediv, gender: 'male'});
-  let tissuesfemale = new HumanTissues({el: femalediv, gender: 'female'});
+  let tissuesmale = new HumanTissues({el: malediv, gender: 'male', width: '4in'});
+  let tissuesfemale = new HumanTissues({el: femalediv, gender: 'female', width: '500px'});
 
   tissuesmale.render();
 
