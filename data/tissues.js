@@ -27,7 +27,6 @@ module.exports = function(gender, width){
   }else{
     height = calculateHeight(width);
   }
-  console.log(`width: ${width} and height: ${height}`);
 
   if(gender === 'female'){
     svgpath = `
