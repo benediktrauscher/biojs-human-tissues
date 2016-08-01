@@ -9,7 +9,7 @@ Install the module with: `npm install biojs-human-tissues`
 
 ```javascript
 var HumanTissues = require('biojs-human-tissues');
-var Tissues = new HumanTissues({el: <div>, [colors: <object>], gender: string})
+var Tissues = new HumanTissues({el: <div>, [colors: <object>], gender: string, width: string})
 ```
 
 ## Documentation
