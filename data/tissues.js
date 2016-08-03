@@ -19,6 +19,20 @@ const bone = require('./bone');
 const blood = require('./blood');
 const retina = require('./retina');
 
+const defaultTissuesShownMan = [
+  'skin_man','bone','blood',
+  'kidney','small_intestine',
+  'large_intestine','lungs','stomach',
+  'liver','pancreas','neck','bladder',
+  'prostate','retina'
+];
+
+const defaultTissuesShownWoman = [
+  'skin_woman','brain',
+  'breast','cervix',
+  'ovary','uterus'
+];
+
 module.exports = function(gender, width,tissuesShown){
   let svgpath, height;
 
@@ -68,71 +82,24 @@ let calculateHeight = (width) => {
 // Method creates the string of which tissues should be shown
 let createTissuesString = (tissuesShown,gender) => {
   let tissuesString = ``;
-  console.log(gender);
-  if(gender == 'female'){
-    if(tissuesShown.find(x => x == 'skin_woman') != null){
-      tissuesString += `${skin_woman}`;
+  tissuesShown.forEach(t => {
+    switch(gender){
+      case 'female' : {
+        if(defaultTissuesShownWoman.find(x => x===t)){
+          let tissueToDraw = require(`./${t}`);
+          tissuesString += `${tissueToDraw}`;
+        }
+        break;
+      }
+      case 'male' : {
+        if(defaultTissuesShownMan.find(x => x===t)){
+          let tissueToDraw = require(`./${t}`);
+          tissuesString += `${tissueToDraw}`;
+        }
+        break;
+      }
     }
-    if(tissuesShown.find(x => x == 'brain') != null){
-      tissuesString += `${brain}`;
-    }
-    if(tissuesShown.find(x => x == 'uterus') != null){
-      tissuesString += `${uterus}`;
-    }
-    if(tissuesShown.find(x => x == 'breast') != null){
-      tissuesString += `${breast}`;
-    }
-    if(tissuesShown.find(x => x == 'cervix') != null){
-      tissuesString += `${cervix}`;
-    }
-    if(tissuesShown.find(x => x == 'ovary') != null){
-      tissuesString += `${ovary}`;
-    }
-  }
-  if(gender == 'male'){
-    if(tissuesShown.find(x => x == 'skin_man') != null){
-      tissuesString += `${skin_man}`;
-    }
-    if(tissuesShown.find(x => x == 'neck') != null){
-      tissuesString += `${neck}`;
-    }
-    if(tissuesShown.find(x => x == 'large_intestine') != null){
-      tissuesString += `${large_intestine}`;
-    }
-    if(tissuesShown.find(x => x == 'small_intestine') != null){
-      tissuesString += `${small_intestine}`;
-    }
-    if(tissuesShown.find(x => x == 'liver') != null){
-      tissuesString += `${liver}`;
-    }
-    if(tissuesShown.find(x => x == 'pancreas') != null){
-      tissuesString += `${pancreas}`;
-    }
-    if(tissuesShown.find(x => x == 'lungs') != null){
-      tissuesString += `${lungs}`;
-    }
-    if(tissuesShown.find(x => x == 'stomach') != null){
-      tissuesString += `${stomach}`;
-    }
-    if(tissuesShown.find(x => x == 'kidney') != null){
-      tissuesString += `${kidney}`;
-    }
-    if(tissuesShown.find(x => x == 'bladder') != null){
-      tissuesString += `${bladder}`;
-    }
-    if(tissuesShown.find(x => x == 'prostate') != null){
-      tissuesString += `${prostate}`;
-    }
-    if(tissuesShown.find(x => x == 'bone') != null){
-      tissuesString += `${bone}`;
-    }
-    if(tissuesShown.find(x => x == 'blood') != null){
-      tissuesString += `${blood}`;
-    }
-    if(tissuesShown.find(x => x == 'retina') != null){
-      tissuesString += `${retina}`;
-    }
-  }
+  })
 
   return tissuesString;
 }

@@ -122,6 +122,10 @@ var bone = require('./bone');
 var blood = require('./blood');
 var retina = require('./retina');
 
+var defaultTissuesShownMan = ['skin_man', 'bone', 'blood', 'kidney', 'small_intestine', 'large_intestine', 'lungs', 'stomach', 'liver', 'pancreas', 'neck', 'bladder', 'prostate', 'retina'];
+
+var defaultTissuesShownWoman = ['skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus'];
+
 module.exports = function (gender, width, tissuesShown) {
   var svgpath = void 0,
       height = void 0;
@@ -161,111 +165,30 @@ var calculateHeight = function calculateHeight(width) {
 // Method creates the string of which tissues should be shown
 var createTissuesString = function createTissuesString(tissuesShown, gender) {
   var tissuesString = '';
-  console.log(gender);
-  if (gender == 'female') {
-    if (tissuesShown.find(function (x) {
-      return x == 'skin_woman';
-    }) != null) {
-      tissuesString += '' + skin_woman;
+  tissuesShown.forEach(function (t) {
+    switch (gender) {
+      case 'female':
+        {
+          if (defaultTissuesShownWoman.find(function (x) {
+            return x === t;
+          })) {
+            var tissueToDraw = require('./' + t);
+            tissuesString += '' + tissueToDraw;
+          }
+          break;
+        }
+      case 'male':
+        {
+          if (defaultTissuesShownMan.find(function (x) {
+            return x === t;
+          })) {
+            var _tissueToDraw = require('./' + t);
+            tissuesString += '' + _tissueToDraw;
+          }
+          break;
+        }
     }
-    if (tissuesShown.find(function (x) {
-      return x == 'brain';
-    }) != null) {
-      tissuesString += '' + brain;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'uterus';
-    }) != null) {
-      tissuesString += '' + uterus;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'breast';
-    }) != null) {
-      tissuesString += '' + breast;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'cervix';
-    }) != null) {
-      tissuesString += '' + cervix;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'ovary';
-    }) != null) {
-      tissuesString += '' + ovary;
-    }
-  }
-  if (gender == 'male') {
-    if (tissuesShown.find(function (x) {
-      return x == 'skin_man';
-    }) != null) {
-      tissuesString += '' + skin_man;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'neck';
-    }) != null) {
-      tissuesString += '' + neck;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'large_intestine';
-    }) != null) {
-      tissuesString += '' + large_intestine;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'small_intestine';
-    }) != null) {
-      tissuesString += '' + small_intestine;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'liver';
-    }) != null) {
-      tissuesString += '' + liver;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'pancreas';
-    }) != null) {
-      tissuesString += '' + pancreas;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'lungs';
-    }) != null) {
-      tissuesString += '' + lungs;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'stomach';
-    }) != null) {
-      tissuesString += '' + stomach;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'kidney';
-    }) != null) {
-      tissuesString += '' + kidney;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'bladder';
-    }) != null) {
-      tissuesString += '' + bladder;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'prostate';
-    }) != null) {
-      tissuesString += '' + prostate;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'bone';
-    }) != null) {
-      tissuesString += '' + bone;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'blood';
-    }) != null) {
-      tissuesString += '' + blood;
-    }
-    if (tissuesShown.find(function (x) {
-      return x == 'retina';
-    }) != null) {
-      tissuesString += '' + retina;
-    }
-  }
+  });
 
   return tissuesString;
 };
@@ -11781,9 +11704,9 @@ var defaultColors = {
   retina: '#FE55EF'
 };
 
-var defaultTissuesShown = ['skin_man', 'bladder', 'blood', 'bone', 'kidney', 'small_intestine', 'large_intestine', 'lungs', 'stomach', 'liver', 'pancreas', 'neck', 'prostate', 'skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus', 'retina'];
+var defaultTissuesShown = ['skin_man', 'bone', 'blood', 'kidney', 'small_intestine', 'large_intestine', 'lungs', 'stomach', 'liver', 'pancreas', 'neck', 'bladder', 'prostate', 'skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus', 'retina'];
 
-var defaultTissuesShownMan = ['skin_man', 'bladder', 'blood', 'bone', 'kidney', 'small_intestine', 'large_intestine', 'lungs', 'stomach', 'liver', 'pancreas', 'neck', 'prostate', 'retina'];
+var defaultTissuesShownMan = ['skin_man', 'bone', 'blood', 'small_intestine', 'large_intestine', 'lungs', 'kidney', 'liver', 'pancreas', 'stomach', 'neck', 'bladder', 'prostate', 'retina'];
 
 var defaultTissuesShownWoman = ['skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus'];
 
