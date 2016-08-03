@@ -17,6 +17,7 @@ const prostate = require('./prostate');
 const bladder = require('./bladder');
 const bone = require('./bone');
 const blood = require('./blood');
+const retina = require('./retina');
 
 module.exports = function(gender, width,tissuesShown){
   let svgpath, height;
@@ -127,6 +128,9 @@ let createTissuesString = (tissuesShown,gender) => {
     }
     if(tissuesShown.find(x => x == 'blood') != null){
       tissuesString += `${blood}`;
+    }
+    if(tissuesShown.find(x => x == 'retina') != null){
+      tissuesString += `${retina}`;
     }
   }
 

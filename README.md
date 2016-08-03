@@ -29,10 +29,10 @@ Light-weight visualisation for human tissues. Right now the list of supported ti
 * prostate
 * bladder
 * breast
-* skin
 * cervix
 * ovary
 * uterus
+* retina
 
 Please notice that it is now possible to make either a female or a male silhouette.
 
