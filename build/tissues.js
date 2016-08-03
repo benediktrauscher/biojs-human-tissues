@@ -116,7 +116,7 @@ var bladder = require('./bladder');
 var bone = require('./bone');
 var blood = require('./blood');
 
-module.exports = function (gender, width) {
+module.exports = function (gender, width, tissuesShown) {
   var svgpath = void 0,
       height = void 0;
 
@@ -127,15 +127,18 @@ module.exports = function (gender, width) {
     height = calculateHeight(width);
   }
 
+  var tissuesString = createTissuesString(tissuesShown, gender);
+
   if (gender === 'female') {
-    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + skin_woman + brain + breast + cervix + ovary + uterus + '\n            </svg>\n            ';
+    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + tissuesString + '\n            </svg>\n            ';
   } else {
-    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + skin_man + neck + large_intestine + small_intestine + liver + pancreas + lungs + stomach + kidney + bladder + prostate + bone + blood + '\n            </svg>';
+    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + tissuesString + '\n            </svg>';
   }
 
   return svgpath;
 };
 
+// Method sets height depending on the width
 var calculateHeight = function calculateHeight(width) {
   var height = void 0;
   var typeofInput = width.substring(width.length - 2, width.length);
@@ -147,6 +150,113 @@ var calculateHeight = function calculateHeight(width) {
     height = 2.31157973 * widthN + typeofInput;
   }
   return height;
+};
+
+// Method creates the string of which tissues should be shown
+var createTissuesString = function createTissuesString(tissuesShown, gender) {
+  var tissuesString = '';
+  console.log(gender);
+  if (gender == 'female') {
+    if (tissuesShown.find(function (x) {
+      return x == 'skin_woman';
+    }) != null) {
+      tissuesString += '' + skin_woman;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'brain';
+    }) != null) {
+      tissuesString += '' + brain;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'uterus';
+    }) != null) {
+      tissuesString += '' + uterus;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'breast';
+    }) != null) {
+      tissuesString += '' + breast;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'cervix';
+    }) != null) {
+      tissuesString += '' + cervix;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'ovary';
+    }) != null) {
+      tissuesString += '' + ovary;
+    }
+  }
+  if (gender == 'male') {
+    if (tissuesShown.find(function (x) {
+      return x == 'skin_man';
+    }) != null) {
+      tissuesString += '' + skin_man;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'neck';
+    }) != null) {
+      tissuesString += '' + neck;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'large_intestine';
+    }) != null) {
+      tissuesString += '' + large_intestine;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'small_intestine';
+    }) != null) {
+      tissuesString += '' + small_intestine;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'liver';
+    }) != null) {
+      tissuesString += '' + liver;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'pancreas';
+    }) != null) {
+      tissuesString += '' + pancreas;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'lungs';
+    }) != null) {
+      tissuesString += '' + lungs;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'stomach';
+    }) != null) {
+      tissuesString += '' + stomach;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'kidney';
+    }) != null) {
+      tissuesString += '' + kidney;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'bladder';
+    }) != null) {
+      tissuesString += '' + bladder;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'prostate';
+    }) != null) {
+      tissuesString += '' + prostate;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'bone';
+    }) != null) {
+      tissuesString += '' + bone;
+    }
+    if (tissuesShown.find(function (x) {
+      return x == 'blood';
+    }) != null) {
+      tissuesString += '' + blood;
+    }
+  }
+
+  return tissuesString;
 };
 
 },{"./bladder":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/bladder.js","./blood":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/blood.js","./bone":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/bone.js","./brain":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/brain.js","./breast":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/breast.js","./cervix":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/cervix.js","./kidney":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/kidney.js","./large_intestine":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/large_intestine.js","./liver":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/liver.js","./lungs":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/lungs.js","./neck":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/neck.js","./ovary":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/ovary.js","./pancreas":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/pancreas.js","./prostate":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/prostate.js","./skin_man":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/skin_man.js","./skin_woman":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/skin_woman.js","./small_intestine":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/small_intestine.js","./stomach":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/stomach.js","./uterus":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/uterus.js"}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/uterus.js":[function(require,module,exports){
@@ -11659,6 +11769,12 @@ var defaultColors = {
   uterus: '#FF00FF'
 };
 
+var defaultTissuesShown = ['skin_man', 'bladder', 'blood', 'bone', 'kidney', 'small_intestine', 'large_intestine', 'lungs', 'stomach', 'liver', 'pancreas', 'neck', 'prostate', 'skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus'];
+
+var defaultTissuesShownMan = ['skin_man', 'bladder', 'blood', 'bone', 'kidney', 'small_intestine', 'large_intestine', 'lungs', 'stomach', 'liver', 'pancreas', 'neck', 'prostate'];
+
+var defaultTissuesShownWoman = ['skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus'];
+
 module.exports = function () {
   function Tissues(opts) {
     _classCallCheck(this, Tissues);
@@ -11668,6 +11784,14 @@ module.exports = function () {
     this.tissues = _.keys(defaultColors);
     this.gender = opts.gender;
     this.width = opts.width;
+
+    if (this.gender == null) {
+      this.tissuesShown = opts.tissuesShown ? opts.tissuesShown : defaultTissuesShown;
+    } else if (this.gender == 'female') {
+      this.tissuesShown = opts.tissuesShown ? opts.tissuesShown : defaultTissuesShownWoman;
+    } else if (this.gender == 'male') {
+      this.tissuesShown = opts.tissuesShown ? opts.tissuesShown : defaultTissuesShownMan;
+    }
 
     //initialize array for potential tooltips
     this.tooltips = [];
@@ -11716,9 +11840,8 @@ module.exports = function () {
       //import tissues svg
       if (this.gender != null) {
         var genderSVG = require('../data/tissues');
-        this.el.innerHTML = genderSVG(this.gender, this.width);
+        this.el.innerHTML = genderSVG(this.gender, this.width, this.tissuesShown);
       } else {
-        console.log('no gender');
         this.el.innerHTML = require('../data/tissues-old');
       }
       //set colours
