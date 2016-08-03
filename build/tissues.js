@@ -21,12 +21,12 @@ module.exports = "\n<path id=\"brain\"\n      fill=\"none\" stroke=\"black\" str
 },{}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/breast.js":[function(require,module,exports){
 "use strict";
 
-module.exports = "\n<path id=\"breast\"\n        fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n        d=\"M 266.00,249.00\n           C 266.00,249.00 266.00,316.00 266.00,316.00\n             266.00,316.00 113.00,316.00 113.00,316.00\n             113.00,316.00 113.00,249.00 113.00,249.00\n             113.00,249.00 266.00,249.00 266.00,249.00 Z\n           M 156.00,492.19\n           C 157.88,491.05 161.42,488.40 163.69,489.30\n             165.99,490.21 166.08,493.23 164.42,495.10\n             163.09,496.60 155.14,501.16 153.04,502.15\n             149.06,504.03 146.30,504.00 142.00,503.95\n             142.00,503.95 128.00,504.90 128.00,504.90\n             120.63,504.39 110.70,495.66 108.01,489.00\n             107.03,486.58 106.91,483.59 107.04,481.00\n             107.16,478.80 107.43,477.00 108.45,475.02\n             115.27,461.81 131.01,474.20 139.00,479.34\n             140.93,480.58 143.77,482.67 146.00,483.09\n             149.57,483.77 155.72,480.01 160.00,479.00\n             160.69,480.65 161.86,482.78 161.30,484.62\n             160.06,488.66 149.94,492.26 146.00,491.77\n             140.41,491.09 131.58,483.89 126.00,480.87\n             123.79,479.67 118.90,476.96 117.21,480.33\n             115.65,483.42 119.55,488.06 122.43,488.89\n             126.02,489.92 140.42,486.80 140.00,498.00\n             147.61,497.81 149.63,496.04 156.00,492.19 Z\n           M 229.00,483.13\n           C 236.08,482.14 247.69,469.20 257.00,469.06\n             265.67,468.93 268.34,476.64 267.96,484.00\n             267.67,489.53 265.67,492.08 261.96,496.00\n             251.77,506.75 250.07,504.98 237.00,503.85\n             237.00,503.85 226.58,503.85 226.58,503.85\n             222.67,502.94 211.97,497.41 210.83,493.68\n             210.11,492.09 210.72,489.64 210.83,488.00\n             220.56,491.65 224.05,497.73 235.00,498.00\n             237.62,485.81 246.98,490.65 253.00,488.40\n             255.68,487.40 260.01,483.57 258.60,480.32\n             257.12,476.90 252.22,479.18 250.00,480.32\n             244.20,483.33 234.73,491.44 229.00,491.88\n             224.81,492.20 214.95,488.64 214.51,483.82\n             214.36,482.08 215.31,480.50 216.00,479.00\n             219.57,480.09 225.75,483.59 229.00,483.13 Z\" />\n";
+module.exports = "\n<path id=\"breast\"\n      fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n      d=\"M 266.00,249.00\n         C 266.00,249.00 266.00,316.00 266.00,316.00\n           266.00,316.00 113.00,316.00 113.00,316.00\n           113.00,316.00 113.00,249.00 113.00,249.00\n           113.00,249.00 266.00,249.00 266.00,249.00 Z\" />\n";
 
 },{}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/cervix.js":[function(require,module,exports){
 "use strict";
 
-module.exports = "\n<path id=\"cervix\"\n        fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n        d=\"M 182.00,551.00\n           C 179.89,550.96 177.48,551.09 175.93,549.40\n             174.88,548.26 174.16,545.50 173.65,544.00\n             170.36,534.36 170.29,533.10 172.20,523.00\n             172.52,521.26 172.97,516.97 173.99,515.74\n             175.52,513.89 178.82,514.03 181.00,514.00\n             181.00,514.00 201.00,514.00 201.00,514.00\n             201.00,514.00 203.78,534.00 203.78,534.00\n             203.78,534.00 199.00,551.00 199.00,551.00\n             199.00,551.00 182.00,551.00 182.00,551.00 Z\" />\n";
+module.exports = "\n<path id=\"cervix\"\n           fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n           d=\"M 187.00,558.00\n              C 184.16,558.00 179.78,558.33 177.58,556.26\n                173.12,552.06 172.40,534.24 176.82,529.74\n                178.89,527.63 183.25,528.00 186.00,528.00\n                188.16,528.00 193.97,527.77 195.69,528.60\n                198.83,530.11 200.00,540.73 199.79,544.00\n                199.49,548.66 197.08,553.38 196.00,558.00\n                196.00,558.00 187.00,558.00 187.00,558.00 Z\" />\n";
 
 },{}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/kidney.js":[function(require,module,exports){
 "use strict";
@@ -56,7 +56,7 @@ module.exports = "\n<path id=\"neck\"\n        fill=\"none\" stroke=\"black\" st
 },{}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/ovary.js":[function(require,module,exports){
 "use strict";
 
-module.exports = "\n<path id=\"ovary\"\n      fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n      d=\"M 156.00,492.19\n         C 157.88,491.05 161.42,488.40 163.69,489.30\n           165.99,490.21 166.08,493.23 164.42,495.10\n           163.09,496.60 155.14,501.16 153.04,502.15\n           149.06,504.03 146.30,504.00 142.00,503.95\n           142.00,503.95 128.00,504.90 128.00,504.90\n           120.63,504.39 110.70,495.66 108.01,489.00\n           107.03,486.58 106.91,483.59 107.04,481.00\n           107.16,478.80 107.43,477.00 108.45,475.02\n           115.27,461.81 131.01,474.20 139.00,479.34\n           140.93,480.58 143.77,482.67 146.00,483.09\n           149.57,483.77 155.72,480.01 160.00,479.00\n           160.69,480.65 161.86,482.78 161.30,484.62\n           160.06,488.66 149.94,492.26 146.00,491.77\n           140.41,491.09 131.58,483.89 126.00,480.87\n           123.79,479.67 118.90,476.96 117.21,480.33\n           115.65,483.42 119.55,488.06 122.43,488.89\n           126.02,489.92 140.42,486.80 140.00,498.00\n           147.61,497.81 149.63,496.04 156.00,492.19 Z\n         M 229.00,483.13\n         C 236.08,482.14 247.69,469.20 257.00,469.06\n           265.67,468.93 268.34,476.64 267.96,484.00\n           267.67,489.53 265.67,492.08 261.96,496.00\n           251.77,506.75 250.07,504.98 237.00,503.85\n           237.00,503.85 226.58,503.85 226.58,503.85\n           222.67,502.94 211.97,497.41 210.83,493.68\n           210.11,492.09 210.72,489.64 210.83,488.00\n           220.56,491.65 224.05,497.73 235.00,498.00\n           237.62,485.81 246.98,490.65 253.00,488.40\n           255.68,487.40 260.01,483.57 258.60,480.32\n           257.12,476.90 252.22,479.18 250.00,480.32\n           244.20,483.33 234.73,491.44 229.00,491.88\n           224.81,492.20 214.95,488.64 214.51,483.82\n           214.36,482.08 215.31,480.50 216.00,479.00\n           219.57,480.09 225.75,483.59 229.00,483.13 Z\" />\n";
+module.exports = "\n<path id=\"ovary\"\n      fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n      d=\"M 159.00,517.06\n         C 157.25,517.88 155.96,518.49 154.00,518.50\n           152.01,518.99 138.66,518.88 137.00,518.50\n           134.87,517.48 132.84,515.88 131.17,514.38\n           129.31,512.72 127.03,510.27 125.98,508.00\n           124.15,504.02 124.58,495.60 128.28,492.74\n           130.88,490.72 134.84,491.21 138.00,491.00\n           140.26,493.45 151.07,501.46 154.00,502.15\n           158.01,503.08 161.62,499.04 164.12,501.04\n           166.36,502.64 164.83,505.25 164.12,507.00\n           164.12,507.00 168.00,506.00 168.00,506.00\n           169.13,512.77 164.51,514.48 159.00,517.06 Z\n         M 245.72,492.74\n         C 249.42,495.60 249.85,504.02 248.02,508.00\n           246.97,510.27 244.69,512.72 242.83,514.38\n           241.16,515.88 239.13,517.48 237.00,518.50\n           235.34,518.88 221.99,518.99 220.00,518.50\n           218.04,518.49 216.75,517.88 215.00,517.06\n           209.49,514.48 204.87,512.77 206.00,506.00\n           206.00,506.00 212.00,507.00 212.00,507.00\n           210.10,505.92 206.79,503.27 209.76,501.04\n           212.40,499.05 215.99,503.08 220.00,502.15\n           222.93,501.46 233.74,493.45 236.00,491.00\n           239.16,491.21 243.12,490.72 245.72,492.74 Z\n         M 149.00,507.07\n         C 145.92,505.46 137.02,498.26 134.32,498.87\n           131.56,499.50 132.09,504.11 135.23,505.98\n           137.93,507.54 142.16,506.71 145.00,505.98\n           150.51,515.37 156.76,513.71 164.00,507.07\n           157.01,508.63 156.01,510.93 149.00,507.07 Z\n         M 221.79,512.61\n         C 224.45,512.19 225.39,509.71 228.87,507.87\n           232.09,506.18 233.12,507.06 236.00,506.71\n           241.42,506.06 242.25,501.32 240.93,499.65\n           239.46,497.77 236.59,499.46 235.09,500.39\n           230.74,503.08 226.07,507.59 221.00,508.97\n           217.50,509.86 215.66,508.07 212.00,508.97\n           214.54,510.44 218.78,513.08 221.79,512.61 Z\" />\n";
 
 },{}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/pancreas.js":[function(require,module,exports){
 "use strict";
@@ -67,6 +67,11 @@ module.exports = "\n<path id=\"pancreas\"\n        fill=\"none\" stroke=\"black\
 "use strict";
 
 module.exports = "\n<path id=\"prostate\"\n      fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n      d=\"M 241.68,573.96\n         C 244.39,575.99 243.68,579.02 240.85,580.26\n           236.16,582.31 228.68,578.27 235.15,573.96\n           237.41,573.22 239.55,572.75 241.68,573.96 Z\" />\n";
+
+},{}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/retina.js":[function(require,module,exports){
+"use strict";
+
+module.exports = "\n<path id=\"retina\"\n      fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n      d=\"M 222.61,74.10\n         C 227.04,79.29 226.26,85.87 219.00,87.69\n           214.22,88.88 207.73,87.24 204.21,83.78\n           197.76,77.43 197.35,70.85 207.00,68.47\n           212.97,67.77 218.58,69.39 222.61,74.10 Z\n         M 273.89,72.22\n         C 276.90,78.15 268.25,86.19 263.00,87.47\n           257.31,88.85 246.84,87.21 248.71,79.00\n           250.03,73.19 255.80,70.08 261.00,68.53\n           264.83,67.99 271.82,68.17 273.89,72.22 Z\" />\n";
 
 },{}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/skin_man.js":[function(require,module,exports){
 "use strict";
@@ -115,8 +120,13 @@ var prostate = require('./prostate');
 var bladder = require('./bladder');
 var bone = require('./bone');
 var blood = require('./blood');
+var retina = require('./retina');
 
-module.exports = function (gender, width) {
+var defaultTissuesShownMan = ['skin_man', 'bone', 'blood', 'kidney', 'small_intestine', 'large_intestine', 'lungs', 'stomach', 'liver', 'pancreas', 'neck', 'bladder', 'prostate', 'retina'];
+
+var defaultTissuesShownWoman = ['skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus'];
+
+module.exports = function (gender, width, tissuesShown) {
   var svgpath = void 0,
       height = void 0;
 
@@ -127,15 +137,18 @@ module.exports = function (gender, width) {
     height = calculateHeight(width);
   }
 
+  var tissuesString = createTissuesString(tissuesShown, gender);
+
   if (gender === 'female') {
-    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + skin_woman + brain + breast + cervix + ovary + uterus + '\n            </svg>\n            ';
+    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + tissuesString + '\n            </svg>\n            ';
   } else {
-    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + skin_man + neck + large_intestine + small_intestine + liver + pancreas + lungs + stomach + kidney + bladder + prostate + bone + blood + '\n            </svg>';
+    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + tissuesString + '\n            </svg>';
   }
 
   return svgpath;
 };
 
+// Method sets height depending on the width
 var calculateHeight = function calculateHeight(width) {
   var height = void 0;
   var typeofInput = width.substring(width.length - 2, width.length);
@@ -149,10 +162,41 @@ var calculateHeight = function calculateHeight(width) {
   return height;
 };
 
-},{"./bladder":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/bladder.js","./blood":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/blood.js","./bone":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/bone.js","./brain":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/brain.js","./breast":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/breast.js","./cervix":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/cervix.js","./kidney":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/kidney.js","./large_intestine":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/large_intestine.js","./liver":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/liver.js","./lungs":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/lungs.js","./neck":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/neck.js","./ovary":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/ovary.js","./pancreas":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/pancreas.js","./prostate":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/prostate.js","./skin_man":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/skin_man.js","./skin_woman":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/skin_woman.js","./small_intestine":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/small_intestine.js","./stomach":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/stomach.js","./uterus":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/uterus.js"}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/uterus.js":[function(require,module,exports){
+// Method creates the string of which tissues should be shown
+var createTissuesString = function createTissuesString(tissuesShown, gender) {
+  var tissuesString = '';
+  tissuesShown.forEach(function (t) {
+    switch (gender) {
+      case 'female':
+        {
+          if (defaultTissuesShownWoman.find(function (x) {
+            return x === t;
+          })) {
+            var tissueToDraw = require('./' + t);
+            tissuesString += '' + tissueToDraw;
+          }
+          break;
+        }
+      case 'male':
+        {
+          if (defaultTissuesShownMan.find(function (x) {
+            return x === t;
+          })) {
+            var _tissueToDraw = require('./' + t);
+            tissuesString += '' + _tissueToDraw;
+          }
+          break;
+        }
+    }
+  });
+
+  return tissuesString;
+};
+
+},{"./bladder":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/bladder.js","./blood":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/blood.js","./bone":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/bone.js","./brain":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/brain.js","./breast":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/breast.js","./cervix":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/cervix.js","./kidney":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/kidney.js","./large_intestine":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/large_intestine.js","./liver":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/liver.js","./lungs":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/lungs.js","./neck":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/neck.js","./ovary":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/ovary.js","./pancreas":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/pancreas.js","./prostate":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/prostate.js","./retina":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/retina.js","./skin_man":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/skin_man.js","./skin_woman":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/skin_woman.js","./small_intestine":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/small_intestine.js","./stomach":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/stomach.js","./uterus":"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/uterus.js"}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/data/uterus.js":[function(require,module,exports){
 "use strict";
 
-module.exports = "\n<path id=\"uterus\"\n      fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n      d=\"M 210.28,469.67\n         C 212.49,471.64 216.59,475.06 217.18,478.00\n           217.95,481.86 212.71,487.48 211.13,491.00\n           211.13,491.00 209.15,499.00 209.15,499.00\n           208.33,501.48 202.29,513.76 200.51,514.98\n           198.68,516.23 195.18,516.00 193.00,516.00\n           193.00,516.00 182.00,516.00 182.00,516.00\n           180.25,516.00 176.92,516.14 175.39,515.43\n           172.50,514.08 167.81,504.18 166.93,501.00\n           166.93,501.00 165.13,493.00 165.13,493.00\n           163.72,489.16 158.22,482.51 158.00,479.01\n           157.79,475.79 160.90,473.76 163.00,471.83\n           169.90,465.51 171.66,463.57 181.00,461.46\n           192.92,459.82 201.16,461.51 210.28,469.67 Z\" />\n";
+module.exports = "\n<path id=\"uterus\"\n        fill=\"none\" stroke=\"black\" stroke-width=\"1\"\n        d=\"M 174.00,489.53\n           C 182.64,484.64 195.14,485.23 203.00,491.39\n             204.95,492.91 209.03,496.70 209.83,499.00\n             211.21,502.93 207.13,505.00 205.49,510.00\n             203.97,514.66 201.47,527.17 196.70,529.40\n             194.78,530.30 186.57,530.00 184.00,530.00\n             182.26,530.00 178.92,530.14 177.39,529.43\n             172.70,527.24 170.03,515.64 168.32,511.09\n             168.32,511.09 162.00,500.00 162.00,500.00\n             165.52,496.27 169.51,492.07 174.00,489.53 Z\" />\n";
 
 },{}],"/Users/torbenbrenner/Documents/local_biojs-human-tissues/lib/easytip.js":[function(require,module,exports){
 "use strict";
@@ -11656,8 +11700,15 @@ var defaultColors = {
   neck: '#00FFFF',
   ovary: '#0000FF',
   prostate: '#FFFF00',
-  uterus: '#FF00FF'
+  uterus: '#FF00FF',
+  retina: '#FE55EF'
 };
+
+var defaultTissuesShown = ['skin_man', 'bone', 'blood', 'kidney', 'small_intestine', 'large_intestine', 'lungs', 'stomach', 'liver', 'pancreas', 'neck', 'bladder', 'prostate', 'skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus', 'retina'];
+
+var defaultTissuesShownMan = ['skin_man', 'bone', 'blood', 'small_intestine', 'large_intestine', 'lungs', 'kidney', 'liver', 'pancreas', 'stomach', 'neck', 'bladder', 'prostate', 'retina'];
+
+var defaultTissuesShownWoman = ['skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus'];
 
 module.exports = function () {
   function Tissues(opts) {
@@ -11668,6 +11719,14 @@ module.exports = function () {
     this.tissues = _.keys(defaultColors);
     this.gender = opts.gender;
     this.width = opts.width;
+
+    if (this.gender == null) {
+      this.tissuesShown = opts.tissuesShown ? opts.tissuesShown : defaultTissuesShown;
+    } else if (this.gender == 'female') {
+      this.tissuesShown = opts.tissuesShown ? opts.tissuesShown : defaultTissuesShownWoman;
+    } else if (this.gender == 'male') {
+      this.tissuesShown = opts.tissuesShown ? opts.tissuesShown : defaultTissuesShownMan;
+    }
 
     //initialize array for potential tooltips
     this.tooltips = [];
@@ -11716,9 +11775,8 @@ module.exports = function () {
       //import tissues svg
       if (this.gender != null) {
         var genderSVG = require('../data/tissues');
-        this.el.innerHTML = genderSVG(this.gender, this.width);
+        this.el.innerHTML = genderSVG(this.gender, this.width, this.tissuesShown);
       } else {
-        console.log('no gender');
         this.el.innerHTML = require('../data/tissues-old');
       }
       //set colours
