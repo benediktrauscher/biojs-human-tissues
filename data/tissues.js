@@ -18,6 +18,7 @@ const bladder = require('./bladder');
 const bone = require('./bone');
 const blood = require('./blood');
 const retina = require('./retina');
+const lymph = require('./lymph');
 
 const defaultTissuesShownMan = [
   'skin_man','bone','blood',
@@ -30,7 +31,7 @@ const defaultTissuesShownMan = [
 const defaultTissuesShownWoman = [
   'skin_woman','brain',
   'breast','cervix',
-  'ovary','uterus'
+  'ovary','uterus','lymph'
 ];
 
 module.exports = function(gender, width,tissuesShown){

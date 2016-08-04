@@ -7,80 +7,88 @@
 
   tissuesmale.render();
 
-  tissuesmale.addClickEvent('neck', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Neck','_blank');
+  tissuesmale.addClickEvent('neck', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Neck','_blank');
   });
 
-  tissuesmale.addClickEvent('large_intestine', function(evt){
+  tissuesmale.addClickEvent('large_intestine', (evt) => {
     window.open('https://en.wikipedia.org/wiki/Large_intestine','_blank');
   });
 
-  tissuesmale.addClickEvent('small_intestine', function(evt){
+  tissuesmale.addClickEvent('small_intestine', (evt) => {
     window.open('https://en.wikipedia.org/wiki/Small_intestine','_blank');
   });
 
-  tissuesmale.addClickEvent('liver', function(evt){
+  tissuesmale.addClickEvent('liver', (evt) => {
     window.open('https://en.wikipedia.org/wiki/Liver','_blank');
   });
 
-  tissuesmale.addClickEvent('pancreas', function(evt){
+  tissuesmale.addClickEvent('pancreas', (evt) => {
     window.open('https://en.wikipedia.org/wiki/Pancreas','_blank');
   });
 
-  tissuesmale.addClickEvent('lungs', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Lungs','_blank');
+  tissuesmale.addClickEvent('lungs', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Lungs','_blank');
   });
 
-  tissuesmale.addClickEvent('stomach', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Stomach','_blank');
+  tissuesmale.addClickEvent('stomach', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Stomach','_blank');
   });
 
-  tissuesmale.addClickEvent('kidney', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Kidney','_blank');
+  tissuesmale.addClickEvent('kidney', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Kidney','_blank');
   });
 
-  tissuesmale.addClickEvent('prostate', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Prostate','_blank');
+  tissuesmale.addClickEvent('prostate', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Prostate','_blank');
   });
 
-  tissuesmale.addClickEvent('bladder', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Bladder','_blank');
+  tissuesmale.addClickEvent('bladder', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Bladder','_blank');
   });
 
-  tissuesmale.addClickEvent('bone', function(evt){
-    window.open('https://de.wikipedia.org/wiki/bone','_blank');
+  tissuesmale.addClickEvent('bone', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/bone','_blank');
   });
 
-  tissuesmale.addClickEvent('blood', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Blood','_blank');
+  tissuesmale.addClickEvent('blood', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Blood','_blank');
   });
 
-  tissuesmale.addClickEvent('skin_man', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Skin','_blank');
+  tissuesmale.addClickEvent('retina', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Retina','_blank');
+  });
+
+  tissuesmale.addClickEvent('skin_man', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Skin','_blank');
   });
 
   tissuesfemale.render();
 
-  tissuesfemale.addClickEvent('brain', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Brain','_blank');
+  tissuesfemale.addClickEvent('brain', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Brain','_blank');
   });
 
-  tissuesfemale.addClickEvent('breast', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Breast','_blank');
+  tissuesfemale.addClickEvent('breast', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Breast','_blank');
   });
 
-  tissuesfemale.addClickEvent('cervix', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Cervix','_blank');
+  tissuesfemale.addClickEvent('cervix', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Cervix','_blank');
   });
 
-  tissuesfemale.addClickEvent('ovary', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Ovary','_blank');
+  tissuesfemale.addClickEvent('ovary', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Ovary','_blank');
   });
 
-  tissuesfemale.addClickEvent('uterus', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Uterus','_blank');
+  tissuesfemale.addClickEvent('uterus', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Uterus','_blank');
   });
 
-  tissuesfemale.addClickEvent('skin_woman', function(evt){
-    window.open('https://de.wikipedia.org/wiki/Skin','_blank');
+  tissuesfemale.addClickEvent('skin_woman', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Skin','_blank');
+  });
+
+  tissuesfemale.addClickEvent('lymph', (evt) => {
+    window.open('https://en.wikipedia.org/wiki/Lymph','_blank');
   });
