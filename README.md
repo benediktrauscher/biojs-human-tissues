@@ -33,12 +33,15 @@ Light-weight visualisation for human tissues. Right now the list of supported ti
 * ovary
 * uterus
 * retina
+* lymph
 
 Please notice that it is now possible to make either a female or a male silhouette.
 
 Please notice it is now possible to scale the silhouette.
 
 Please notice it is now possible to decide, which tissues should be shown.
+
+Please notice it is possible to use the old silhouette with the old tissues. But there are no possibilities to change the size and the displayed tissues.
 
 Please refer to the example for more detailed instructions on how to initialize and use the visualisation.
 

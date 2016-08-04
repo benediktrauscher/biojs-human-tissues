@@ -1,6 +1,6 @@
 // if you don't specify a html file, the sniper will generate a div with id "rootDiv"
 var HumanTissues = require("biojs-human-tissues");
-var tissues = new HumanTissues({el: rootDiv, gender: 'male'});
+var tissues = new HumanTissues({el: rootDiv});
 
 //Rendering needs to happen before events are set!
 tissues.render();
