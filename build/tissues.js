@@ -11691,12 +11691,12 @@ var defaultColors = {
   skin_old: '#ffcc99',
   skin_man: '#ffcc99',
   skin_woman: '#ffcc99',
-  bladder: '#FF0000',
-  blood: '#FF0000',
+  bladder: '#FFD034',
+  blood: '#FF4C3B',
   bone: '#FFFFFF',
   brain: '#47a447',
   brain_old: '#47a447',
-  breast: '#0056FF',
+  breast: '#FF7A5A',
   cervix: '#455600',
   kidney: '#550054',
   small_intestine: '#FF69B4',
@@ -11712,11 +11712,11 @@ var defaultColors = {
   stomach_old: '#39b3d7',
   liver_old: '#db4437',
   pancreas_old: '#f4b400',
-  neck: '#00FFFF',
-  ovary: '#0000FF',
-  prostate: '#FFFF00',
-  uterus: '#FF00FF',
-  retina: '#FE55EF',
+  neck: '#FF4C3B',
+  ovary: '#0072BB',
+  prostate: '#462066',
+  uterus: '#FFB85F',
+  retina: '#00AAA0',
   lymph: '#3234AF'
 };
 
@@ -11727,22 +11727,33 @@ var defaultTissuesShownMan = ['skin_man', 'bone', 'blood', 'small_intestine', 'l
 var defaultTissuesShownWoman = ['skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus', 'lymph'];
 
 module.exports = function () {
-  function Tissues(opts) {
+  function Tissues(_ref) {
+    var _ref$el = _ref.el;
+    var el = _ref$el === undefined ? null : _ref$el;
+    var _ref$colors = _ref.colors;
+    var colors = _ref$colors === undefined ? null : _ref$colors;
+    var _ref$gender = _ref.gender;
+    var gender = _ref$gender === undefined ? 'male' : _ref$gender;
+    var _ref$width = _ref.width;
+    var width = _ref$width === undefined ? '300px' : _ref$width;
+    var _ref$tissuesShown = _ref.tissuesShown;
+    var tissuesShown = _ref$tissuesShown === undefined ? null : _ref$tissuesShown;
+
     _classCallCheck(this, Tissues);
 
-    this.el = opts.el;
-    this.colorMap = opts.colors ? opts.colors : defaultColors;
-    this.gender = opts.gender;
-    this.width = opts.width;
+    this.el = el;
+    this.colorMap = colors ? colors : defaultColors;
+    this.gender = gender;
+    this.width = width;
 
     if (this.gender == null) {
-      this.tissuesShown = opts.tissuesShown ? opts.tissuesShown : defaultTissuesShownOld;
+      this.tissuesShown = tissuesShown ? tissuesShown : defaultTissuesShownOld;
       this.tissues = defaultTissuesShownOld;
-    } else if (this.gender == 'female') {
-      this.tissuesShown = opts.tissuesShown ? opts.tissuesShown : defaultTissuesShownWoman;
+    } else if (this.gender === 'female') {
+      this.tissuesShown = tissuesShown ? tissuesShown : defaultTissuesShownWoman;
       this.tissues = defaultTissuesShownWoman;
-    } else if (this.gender == 'male') {
-      this.tissuesShown = opts.tissuesShown ? opts.tissuesShown : defaultTissuesShownMan;
+    } else if (this.gender === 'male') {
+      this.tissuesShown = tissuesShown ? tissuesShown : defaultTissuesShownMan;
       this.tissues = defaultTissuesShownMan;
     }
 
@@ -11771,8 +11782,6 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
-        console.log('Setze Farbe für ' + tissue + ' auf ' + color);
-        console.log($('#' + tissue));
         $('#' + tissue).css('fill', color);
       }
     }
