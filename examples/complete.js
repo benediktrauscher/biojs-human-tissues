@@ -65,30 +65,39 @@
 
   tissuesfemale.render();
 
-  tissuesfemale.addClickEvent('brain', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Brain','_blank');
-  });
+  // tissuesfemale.addClickEvent('brain', (evt) => {
+  //   window.open('https://en.wikipedia.org/wiki/Brain','_blank');
+  // });
 
-  tissuesfemale.addClickEvent('breast', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Breast','_blank');
-  });
+  // tissuesfemale.addClickEvent('breast', (evt) => {
+  //   window.open('https://en.wikipedia.org/wiki/Breast','_blank');
+  // });
 
-  tissuesfemale.addClickEvent('cervix', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Cervix','_blank');
-  });
+  // tissuesfemale.addClickEvent('cervix', (evt) => {
+  //   window.open('https://en.wikipedia.org/wiki/Cervix','_blank');
+  // });
 
-  tissuesfemale.addClickEvent('ovary', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Ovary','_blank');
-  });
+  // tissuesfemale.addClickEvent('ovary', (evt) => {
+  //   window.open('https://en.wikipedia.org/wiki/Ovary','_blank');
+  // });
+  //
+  // tissuesfemale.addClickEvent('uterus', (evt) => {
+  //   window.open('https://en.wikipedia.org/wiki/Uterus','_blank');
+  // });
+  //
+  // tissuesfemale.addClickEvent('skin_woman', (evt) => {
+  //   window.open('https://en.wikipedia.org/wiki/Skin','_blank');
+  // });
+  //
+  // tissuesfemale.addClickEvent('lymph', (evt) => {
+  //   window.open('https://en.wikipedia.org/wiki/Lymph','_blank');
+  // });
 
-  tissuesfemale.addClickEvent('uterus', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Uterus','_blank');
-  });
-
-  tissuesfemale.addClickEvent('skin_woman', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Skin','_blank');
-  });
-
-  tissuesfemale.addClickEvent('lymph', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Lymph','_blank');
-  });
+  tissuesfemale.addTooltip(`brain`,`<h3> Best tooltip ever </h3>`, `click`);
+  tissuesfemale.addTooltip(`breast`,`<h3> Best tooltip ever </h3>`, `click`);
+  tissuesfemale.addTooltip(`cervix`,`<h3> Best tooltip ever </h3>`, `click`);
+  // tissuesfemale.addTooltip(`ovary`,`<h3> Best tooltip ever </h3>`);
+  // tissuesfemale.addTooltip(`uterus`,`<h3> Best tooltip ever </h3>`);
+  // tissuesfemale.addTooltip(`skin_woman`,`<h3> Best tooltip ever </h3>`);
+  // tissuesfemale.addTooltip(`lymph`,`<h3> Best tooltip ever </h3>`);
+  console.log(`say hi`)
