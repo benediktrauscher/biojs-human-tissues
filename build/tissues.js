@@ -229,7 +229,6 @@ module.exports = function () {
   _createClass(EasyTip, [{
     key: "show",
     value: function show(evt) {
-      console.log("calling show");
       // to handle visibility of tooltips in toogle mode
       this.showTip = true;
       //move div to mouse position and display
@@ -245,7 +244,6 @@ module.exports = function () {
   }, {
     key: "hide",
     value: function hide() {
-      console.log("calling hide");
       //to handle visibility of tooltips in toogle mode
       this.showTip = false;
       //simply hide div
@@ -255,7 +253,6 @@ module.exports = function () {
     key: "toggle",
     value: function toggle(evt) {
       // toggles between showing and not showing the tooltip
-      console.log("this must be called !!!");
       if (this.showTip) {
         this.hide();
       } else {
@@ -11995,7 +11992,6 @@ module.exports = function () {
             // when mode parameter is given check if toggle mode selected
             if (mode === 'click') {
               $('#' + tissue).on('click', function (evt) {
-                console.log('tooltips: ' + _this2.tooltips);
                 _this2.tooltips.forEach(function (toolTip) {
                   if (toolTip !== tip) {
                     toolTip.hide();

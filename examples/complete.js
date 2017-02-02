@@ -93,11 +93,10 @@
   //   window.open('https://en.wikipedia.org/wiki/Lymph','_blank');
   // });
 
-  tissuesfemale.addTooltip(`brain`,`<h3> Best tooltip ever </h3>`, `click`);
-  tissuesfemale.addTooltip(`breast`,`<h3> Best tooltip ever </h3>`, `click`);
-  tissuesfemale.addTooltip(`cervix`,`<h3> Best tooltip ever </h3>`, `click`);
-  // tissuesfemale.addTooltip(`ovary`,`<h3> Best tooltip ever </h3>`);
-  // tissuesfemale.addTooltip(`uterus`,`<h3> Best tooltip ever </h3>`);
-  // tissuesfemale.addTooltip(`skin_woman`,`<h3> Best tooltip ever </h3>`);
-  // tissuesfemale.addTooltip(`lymph`,`<h3> Best tooltip ever </h3>`);
-  console.log(`say hi`)
+  tissuesfemale.addTooltip(`brain`,`<h3> Brain </h3>`, `click`);
+  tissuesfemale.addTooltip(`breast`,`<h3> Breast </h3>`, `click`);
+  tissuesfemale.addTooltip(`cervix`,`<h3> Cervix </h3>`, `click`);
+  tissuesfemale.addTooltip(`ovary`,`<h3> Ovary </h3>`,'click');
+  tissuesfemale.addTooltip(`uterus`,`<h3> Uterus </h3>`,'click');
+  tissuesfemale.addTooltip(`skin_woman`,`<h3> Skin </h3>`,'click');
+  tissuesfemale.addTooltip(`lymph`,`<h3> Lymph </h3>`,'click');
