@@ -175,6 +175,9 @@ var createTissuesString = function createTissuesString(tissuesShown, gender) {
     switch (gender) {
       case 'female':
         {
+          if (t === 'skin') {
+            t = 'skin_woman';
+          };
           if (defaultTissuesShownWoman.find(function (x) {
             return x === t;
           })) {
@@ -185,6 +188,9 @@ var createTissuesString = function createTissuesString(tissuesShown, gender) {
         }
       case 'male':
         {
+          if (t === 'skin') {
+            t = 'skin_man';
+          };
           if (defaultTissuesShownMan.find(function (x) {
             return x === t;
           })) {
@@ -11704,8 +11710,7 @@ var Tip = require('./easytip');
 
 var defaultColors = {
   skin_old: '#ffcc99',
-  skin_man: '#ffcc99',
-  skin_woman: '#ffcc99',
+  skin: '#ffcc99',
   bladder: '#FFD034',
   blood: '#FF4C3B',
   bone: '#FFFFFF',
@@ -11737,9 +11742,9 @@ var defaultColors = {
 
 var defaultTissuesShownOld = ['skin_old', 'brain_old', 'colon_old', 'lungs_old', 'stomach_old', 'liver_old', 'pancreas_old', 'small_intestine_old'];
 
-var defaultTissuesShownMan = ['skin_man', 'bone', 'blood', 'small_intestine', 'large_intestine', 'lungs', 'kidney', 'liver', 'pancreas', 'stomach', 'neck', 'bladder', 'prostate', 'retina'];
+var defaultTissuesShownMan = ['skin', 'bone', 'blood', 'small_intestine', 'large_intestine', 'lungs', 'kidney', 'liver', 'pancreas', 'stomach', 'neck', 'bladder', 'prostate', 'retina'];
 
-var defaultTissuesShownWoman = ['skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus', 'lymph'];
+var defaultTissuesShownWoman = ['skin', 'brain', 'breast', 'cervix', 'ovary', 'uterus', 'lymph'];
 
 module.exports = function () {
   function Tissues(_ref) {
@@ -11797,6 +11802,12 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        if (tissue === 'skin' && this.gender === 'female') {
+          tissue = 'skin_woman';
+        };
+        if (tissue === 'skin' && this.gender === 'male') {
+          tissue = 'skin_man';
+        };
         $('#' + tissue).css('fill', color);
       }
     }
@@ -11856,6 +11867,13 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        // in case of tissue skin, this must be done to find the right tissue
+        if (this.gender === 'male' && tissue === 'skin') {
+          tissue = 'skin_man';
+        };
+        if (this.gender === 'female' && tissue === 'skin') {
+          tissue = 'skin_woman';
+        };
         $('#' + tissue).on('mouseover', function (evt) {
           $('#' + tissue).css('stroke', '#fff');
           func(evt.originalEvent);
@@ -11893,6 +11911,13 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        // in case of tissue skin, this must be done to find the right tissue
+        if (this.gender === 'male' && tissue === 'skin') {
+          tissue = 'skin_man';
+        };
+        if (this.gender === 'female' && tissue === 'skin') {
+          tissue = 'skin_woman';
+        };
         $('#' + tissue).css('cursor', 'pointer');
         $('#' + tissue).on('click', function (evt) {
           func(evt.originalEvent);
@@ -11924,6 +11949,13 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        // in case of tissue skin, this must be done to find the right tissue
+        if (this.gender === 'male' && tissue === 'skin') {
+          tissue = 'skin_man';
+        };
+        if (this.gender === 'female' && tissue === 'skin') {
+          tissue = 'skin_woman';
+        };
         $('#' + tissue).css('visibility', 'hidden');
       }
     }
@@ -11952,6 +11984,13 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        // in case of tissue skin, this must be done to find the right tissue
+        if (this.gender === 'male' && tissue === 'skin') {
+          tissue = 'skin_man';
+        };
+        if (this.gender === 'female' && tissue === 'skin') {
+          tissue = 'skin_woman';
+        };
         $('#' + tissue).css('visibility', 'visible');
       }
     }
@@ -11976,7 +12015,7 @@ module.exports = function () {
       // For the case somebody uses the old tissue
       if (this.gender == null) {
         tissue += '_old';
-      }
+      };
       //if(!_.find(this.tissues, el => { return tissue === el; })){
       if (!this.tissues.find(function (el) {
         return tissue === el;
@@ -11984,6 +12023,13 @@ module.exports = function () {
         throw new Error('Specified tissue is not supported.');
       } else {
         (function () {
+          // in case of tissue skin, this must be done to find the right tissue
+          if (_this2.gender === 'male' && tissue === 'skin') {
+            tissue = 'skin_man';
+          };
+          if (_this2.gender === 'female' && tissue === 'skin') {
+            tissue = 'skin_woman';
+          };
           //create new tooltip object
           var tip = new Tip(_this2.el);
           //set content for tooltip div
