@@ -145,11 +145,7 @@ module.exports = function (gender, width, tissuesShown) {
 
   var tissuesString = createTissuesString(tissuesShown, gender);
 
-  if (gender === 'female') {
-    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + tissuesString + '\n            </svg>\n            ';
-  } else {
-    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + tissuesString + '\n            </svg>';
-  }
+  svgpath = '\n          <svg xmlns="http://www.w3.org/2000/svg"\n               width="' + width + '" height="' + height + '"\n               viewBox="0 0 475 1098">\n               ' + tissuesString + '\n          </svg>\n          ';
 
   return svgpath;
 };
