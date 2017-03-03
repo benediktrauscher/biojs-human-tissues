@@ -1,6 +1,6 @@
 // if you don't specify a html file, the sniper will generate a div with id "rootDiv"
 var HumanTissues = require("biojs-human-tissues");
-var tissues = new HumanTissues({el: rootDiv});
+var tissues = new HumanTissues({el: rootDiv,color:null,gender:null});
 
 //Rendering needs to happen before events are set!
 tissues.render();
@@ -30,19 +30,18 @@ tissues.addClickEvent('small_intestine', function(evt){
   window.open('https://en.wikipedia.org/wiki/Small_intestine','_blank')
 });
 
-
 //example mouseover events
 for(var i=0; i<tissues.tissues.length; i++){
-  tissues.addMouseoverEvent(tissues.tissues[i], function(evt){
-    console.log('Mousing over ' + evt.srcElement.id);
+  var t = tissues.tissues[i].replace('_old','');
+  tissues.addMouseoverEvent(t, function(evt){
+    // just to see the markening of the currently hovered tissue
   });
 }
 
 //example tooltips
-var t;
 for(var i=0; i<tissues.tissues.length; i++){
-  t = tissues.tissues[i];
-  tissues.addTooltip(t, '<h1>Tooltip for ' + t + '!</h1>');
+  var t = tissues.tissues[i].replace('_old','');
+  tissues.addTooltip(t, '<h3>Tooltip for ' + t + '!</h3>');
 }
 
 window.tissues = tissues;

@@ -141,7 +141,7 @@ How to use this method
 Tissues.show('colon');
 ```
 
-#### .addTooltip(tissue, ttcontent)
+#### .addTooltip(tissue, ttcontent, mode)
 
 **Parameter**: `tissue`
 **Type**: `String`
@@ -151,12 +151,18 @@ Tissues.show('colon');
 **Type**: `String`
 **Example**: `<h1>Colon tooltip!</h1>`
 
+**Parameter**: `mode`
+**Type**: `String`
+**Example**: `click`
+
 Method responsible for adding Tooltips to tissues. The tooltip content is specified by the ttcontent parameter which can be a HTML string.
+
+You can now select between the a normal toolbox and a toolbox which is activated and deactivated by clicking on the tissue. This mode can be selected by passing `click` as third parameter.
 
 How to use this method
 
 ```javascript
-Tissues.addTooltip('pancreas', '<h1>Pancreas!</h1>');
+Tissues.addTooltip('pancreas', '<h1>Pancreas!</h1>', 'click');
 ```
 
 #### .tooltipCss(key, value)

@@ -2,7 +2,7 @@
   let femalediv = document.getElementById("female");
 
   const HumanTissues = require('biojs-human-tissues');
-  let tissuesmale = new HumanTissues({el: malediv, gender: 'male' });
+  let tissuesmale = new HumanTissues({  el: malediv, gender: 'male'});
   let tissuesfemale = new HumanTissues({el: femalediv, gender: 'female' });
 
   tissuesmale.render();
@@ -59,36 +59,16 @@
     window.open('https://en.wikipedia.org/wiki/Retina','_blank');
   });
 
-  tissuesmale.addClickEvent('skin_man', (evt) => {
+  tissuesmale.addClickEvent('skin', (evt) => {
     window.open('https://en.wikipedia.org/wiki/Skin','_blank');
   });
 
   tissuesfemale.render();
 
-  tissuesfemale.addClickEvent('brain', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Brain','_blank');
-  });
-
-  tissuesfemale.addClickEvent('breast', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Breast','_blank');
-  });
-
-  tissuesfemale.addClickEvent('cervix', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Cervix','_blank');
-  });
-
-  tissuesfemale.addClickEvent('ovary', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Ovary','_blank');
-  });
-
-  tissuesfemale.addClickEvent('uterus', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Uterus','_blank');
-  });
-
-  tissuesfemale.addClickEvent('skin_woman', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Skin','_blank');
-  });
-
-  tissuesfemale.addClickEvent('lymph', (evt) => {
-    window.open('https://en.wikipedia.org/wiki/Lymph','_blank');
-  });
+  tissuesfemale.addTooltip(`brain`,`<h3> Brain </h3>`, `click`);
+  tissuesfemale.addTooltip(`breast`,`<h3> Breast </h3>`, `click`);
+  tissuesfemale.addTooltip(`cervix`,`<h3> Cervix </h3>`, `click`);
+  tissuesfemale.addTooltip(`ovary`,`<h3> Ovary </h3>`,'click');
+  tissuesfemale.addTooltip(`uterus`,`<h3> Uterus </h3>`,'click');
+  tissuesfemale.addTooltip(`skin`,`<h3> Skin </h3>`,'click');
+  tissuesfemale.addTooltip(`lymph`,`<h3> Lymph </h3>`,'click');

@@ -24,8 +24,7 @@
   "scripts": {
     "test": "echo 'Error: no test specified' && exit 1",
     "build": "mkdirp build && browserify -r ./:biojs-human-tissues -o build/tissues.js -t [ babelify --presets [ es2015 ] ] ",
-    "build-browser": "npm run build",
-    "install": "npm run build",
+    "build-browser": "npm run build",  
     "watch": "watchify -r ./:biojs-human-tissues -v -o build/tissues.js -t [ babelify --presets [ es2015 ] ] ",
     "w": "prunner \"npm run sniper\" \"npm run watch\"",
     "sniper": "sniper ."

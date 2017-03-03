@@ -46,22 +46,13 @@ module.exports = function(gender, width,tissuesShown){
 
   let tissuesString = createTissuesString(tissuesShown,gender);
 
-  if(gender === 'female'){
-    svgpath = `
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 width="${width}" height="${height}"
-                 viewBox="0 0 475 1098">
-                 ${tissuesString}
-            </svg>
-            `;
-  } else {
-    svgpath = `
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 width="${width}" height="${height}"
-                 viewBox="0 0 475 1098">
-                 ${tissuesString}
-            </svg>`;
-  }
+  svgpath = `
+          <svg xmlns="http://www.w3.org/2000/svg"
+               width="${width}" height="${height}"
+               viewBox="0 0 475 1098">
+               ${tissuesString}
+          </svg>
+          `;
 
   return svgpath;
 }
@@ -86,6 +77,9 @@ let createTissuesString = (tissuesShown,gender) => {
   tissuesShown.forEach(t => {
     switch(gender){
       case 'female' : {
+        if(t==='skin'){
+          t = 'skin_woman';
+        };
         if(defaultTissuesShownWoman.find(x => x===t)){
           let tissueToDraw = require(`./${t}`);
           tissuesString += `${tissueToDraw}`;
@@ -93,6 +87,9 @@ let createTissuesString = (tissuesShown,gender) => {
         break;
       }
       case 'male' : {
+        if(t==='skin'){
+          t = 'skin_man';
+        };
         if(defaultTissuesShownMan.find(x => x===t)){
           let tissueToDraw = require(`./${t}`);
           tissuesString += `${tissueToDraw}`;

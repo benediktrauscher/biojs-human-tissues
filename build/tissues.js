@@ -145,11 +145,7 @@ module.exports = function (gender, width, tissuesShown) {
 
   var tissuesString = createTissuesString(tissuesShown, gender);
 
-  if (gender === 'female') {
-    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + tissuesString + '\n            </svg>\n            ';
-  } else {
-    svgpath = '\n            <svg xmlns="http://www.w3.org/2000/svg"\n                 width="' + width + '" height="' + height + '"\n                 viewBox="0 0 475 1098">\n                 ' + tissuesString + '\n            </svg>';
-  }
+  svgpath = '\n          <svg xmlns="http://www.w3.org/2000/svg"\n               width="' + width + '" height="' + height + '"\n               viewBox="0 0 475 1098">\n               ' + tissuesString + '\n          </svg>\n          ';
 
   return svgpath;
 };
@@ -175,6 +171,9 @@ var createTissuesString = function createTissuesString(tissuesShown, gender) {
     switch (gender) {
       case 'female':
         {
+          if (t === 'skin') {
+            t = 'skin_woman';
+          };
           if (defaultTissuesShownWoman.find(function (x) {
             return x === t;
           })) {
@@ -185,6 +184,9 @@ var createTissuesString = function createTissuesString(tissuesShown, gender) {
         }
       case 'male':
         {
+          if (t === 'skin') {
+            t = 'skin_man';
+          };
           if (defaultTissuesShownMan.find(function (x) {
             return x === t;
           })) {
@@ -220,6 +222,7 @@ module.exports = function () {
     //add to body
     this.el = el;
     div.appendChild(this.el);
+    this.showTip = false; // for toggle Mode
 
     //set styles
     this.resetStyles();
@@ -228,6 +231,8 @@ module.exports = function () {
   _createClass(EasyTip, [{
     key: "show",
     value: function show(evt) {
+      // to handle visibility of tooltips in toogle mode
+      this.showTip = true;
       //move div to mouse position and display
       var left = void 0,
           top = void 0;
@@ -241,8 +246,20 @@ module.exports = function () {
   }, {
     key: "hide",
     value: function hide() {
+      //to handle visibility of tooltips in toogle mode
+      this.showTip = false;
       //simply hide div
       this.el.style.display = "none";
+    }
+  }, {
+    key: "toggle",
+    value: function toggle(evt) {
+      // toggles between showing and not showing the tooltip
+      if (this.showTip) {
+        this.hide();
+      } else {
+        this.show(evt);
+      }
     }
   }, {
     key: "content",
@@ -11689,8 +11706,7 @@ var Tip = require('./easytip');
 
 var defaultColors = {
   skin_old: '#ffcc99',
-  skin_man: '#ffcc99',
-  skin_woman: '#ffcc99',
+  skin: '#ffcc99',
   bladder: '#FFD034',
   blood: '#FF4C3B',
   bone: '#FFFFFF',
@@ -11722,22 +11738,22 @@ var defaultColors = {
 
 var defaultTissuesShownOld = ['skin_old', 'brain_old', 'colon_old', 'lungs_old', 'stomach_old', 'liver_old', 'pancreas_old', 'small_intestine_old'];
 
-var defaultTissuesShownMan = ['skin_man', 'bone', 'blood', 'small_intestine', 'large_intestine', 'lungs', 'kidney', 'liver', 'pancreas', 'stomach', 'neck', 'bladder', 'prostate', 'retina'];
+var defaultTissuesShownMan = ['skin', 'bone', 'blood', 'small_intestine', 'large_intestine', 'lungs', 'kidney', 'liver', 'pancreas', 'stomach', 'neck', 'bladder', 'prostate', 'retina'];
 
-var defaultTissuesShownWoman = ['skin_woman', 'brain', 'breast', 'cervix', 'ovary', 'uterus', 'lymph'];
+var defaultTissuesShownWoman = ['skin', 'brain', 'breast', 'cervix', 'ovary', 'uterus', 'lymph'];
 
 module.exports = function () {
   function Tissues(_ref) {
-    var _ref$el = _ref.el;
-    var el = _ref$el === undefined ? null : _ref$el;
-    var _ref$colors = _ref.colors;
-    var colors = _ref$colors === undefined ? null : _ref$colors;
-    var _ref$gender = _ref.gender;
-    var gender = _ref$gender === undefined ? 'male' : _ref$gender;
-    var _ref$width = _ref.width;
-    var width = _ref$width === undefined ? '300px' : _ref$width;
-    var _ref$tissuesShown = _ref.tissuesShown;
-    var tissuesShown = _ref$tissuesShown === undefined ? null : _ref$tissuesShown;
+    var _ref$el = _ref.el,
+        el = _ref$el === undefined ? null : _ref$el,
+        _ref$colors = _ref.colors,
+        colors = _ref$colors === undefined ? null : _ref$colors,
+        _ref$gender = _ref.gender,
+        gender = _ref$gender === undefined ? 'male' : _ref$gender,
+        _ref$width = _ref.width,
+        width = _ref$width === undefined ? '300px' : _ref$width,
+        _ref$tissuesShown = _ref.tissuesShown,
+        tissuesShown = _ref$tissuesShown === undefined ? null : _ref$tissuesShown;
 
     _classCallCheck(this, Tissues);
 
@@ -11755,6 +11771,34 @@ module.exports = function () {
     } else if (this.gender === 'male') {
       this.tissuesShown = tissuesShown ? tissuesShown : defaultTissuesShownMan;
       this.tissues = defaultTissuesShownMan;
+    }
+
+    // this is for filtering out tissues which are normaly not part of this silhouette
+    if (tissuesShown) {
+      var tissueResult = [];
+      switch (gender) {
+        case 'male':
+          {
+            tissuesShown.forEach(function (tissue) {
+              if (defaultTissuesShownMan.indexOf(tissue.toLowerCase()) !== -1) {
+                tissueResult = tissueResult.concat(tissue.toLowerCase());
+              }
+            });
+            break;
+          }
+        case 'female':
+          {
+            tissuesShown.forEach(function (tissue) {
+              // this checks if tissue is in the defaultTissuesShownWoman array
+              if (defaultTissuesShownWoman.indexOf(tissue.toLowerCase()) !== -1) {
+                // add it to result
+                tissueResult = tissueResult.concat(tissue.toLowerCase());
+              }
+            });
+            break;
+          }
+      }
+      this.tissuesShown = tissueResult;
     }
 
     //initialize array for potential tooltips
@@ -11782,6 +11826,12 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        if (tissue === 'skin' && this.gender === 'female') {
+          tissue = 'skin_woman';
+        };
+        if (tissue === 'skin' && this.gender === 'male') {
+          tissue = 'skin_man';
+        };
         $('#' + tissue).css('fill', color);
       }
     }
@@ -11841,6 +11891,13 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        // in case of tissue skin, this must be done to find the right tissue
+        if (this.gender === 'male' && tissue === 'skin') {
+          tissue = 'skin_man';
+        };
+        if (this.gender === 'female' && tissue === 'skin') {
+          tissue = 'skin_woman';
+        };
         $('#' + tissue).on('mouseover', function (evt) {
           $('#' + tissue).css('stroke', '#fff');
           func(evt.originalEvent);
@@ -11878,6 +11935,13 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        // in case of tissue skin, this must be done to find the right tissue
+        if (this.gender === 'male' && tissue === 'skin') {
+          tissue = 'skin_man';
+        };
+        if (this.gender === 'female' && tissue === 'skin') {
+          tissue = 'skin_woman';
+        };
         $('#' + tissue).css('cursor', 'pointer');
         $('#' + tissue).on('click', function (evt) {
           func(evt.originalEvent);
@@ -11909,6 +11973,13 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        // in case of tissue skin, this must be done to find the right tissue
+        if (this.gender === 'male' && tissue === 'skin') {
+          tissue = 'skin_man';
+        };
+        if (this.gender === 'female' && tissue === 'skin') {
+          tissue = 'skin_woman';
+        };
         $('#' + tissue).css('visibility', 'hidden');
       }
     }
@@ -11937,6 +12008,13 @@ module.exports = function () {
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
+        // in case of tissue skin, this must be done to find the right tissue
+        if (this.gender === 'male' && tissue === 'skin') {
+          tissue = 'skin_man';
+        };
+        if (this.gender === 'female' && tissue === 'skin') {
+          tissue = 'skin_woman';
+        };
         $('#' + tissue).css('visibility', 'visible');
       }
     }
@@ -11955,36 +12033,67 @@ module.exports = function () {
 
   }, {
     key: 'addTooltip',
-    value: function addTooltip(tissue, ttcontent) {
+    value: function addTooltip(tissue, ttcontent, mode) {
       var _this2 = this;
 
       // For the case somebody uses the old tissue
       if (this.gender == null) {
         tissue += '_old';
-      }
+      };
       //if(!_.find(this.tissues, el => { return tissue === el; })){
       if (!this.tissues.find(function (el) {
         return tissue === el;
       })) {
         throw new Error('Specified tissue is not supported.');
       } else {
-        (function () {
-          //create new tooltip object
-          var tip = new Tip(_this2.el);
-          //set content for tooltip div
-          tip.content(ttcontent);
+        // in case of tissue skin, this must be done to find the right tissue
+        if (this.gender === 'male' && tissue === 'skin') {
+          tissue = 'skin_man';
+        };
+        if (this.gender === 'female' && tissue === 'skin') {
+          tissue = 'skin_woman';
+        };
+        //create new tooltip object
+        var tip = new Tip(this.el);
+        //set content for tooltip div
+        tip.content(ttcontent);
+        if (mode) {
+          // when mode parameter is given check if toggle mode selected
+          if (mode === 'click') {
+            $('#' + tissue).on('click', function (evt) {
+              _this2.tooltips.forEach(function (toolTip) {
+                if (toolTip !== tip) {
+                  toolTip.hide();
+                }
+              });
+              tip.toggle(evt);
+            });
+          } else {
+            // then not toogle mode go with mouseenter and mouseout
+            //show on mouseenter
+            $('#' + tissue).on('mouseenter', function (evt) {
+              tip.show();
+            });
+            //hide on mouseout
+            $('#' + tissue).on('mouseout', function (evt) {
+              tip.hide();
+            });
+          }
+        } else {
+          // then mode is not given as parameter just use mouseenter and mouseout
           //show on mouseenter
           $('#' + tissue).on('mouseenter', function (evt) {
-            tip.show(evt);
+            tip.show();
           });
           //hide on mouseout
           $('#' + tissue).on('mouseout', function (evt) {
             tip.hide();
           });
-          //save tooltips to object letiable so styles can be
-          //set collectively
-          _this2.tooltips.push(tip);
-        })();
+        }
+
+        //save tooltips to object letiable so styles can be
+        //set collectively
+        this.tooltips.push(tip);
       }
     }
 
