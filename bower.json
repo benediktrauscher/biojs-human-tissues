@@ -1,5 +1,6 @@
 {
   "name": "biojs-human-tissues",
+  "version": "0.0.2",
   "description": "Visualisation of human tissues",
   "main": "build/tissues.js",
   "authors": [
